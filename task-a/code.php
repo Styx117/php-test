@@ -18,8 +18,14 @@
      */
     
     
-    function containsWord(){
+    function containsWord($word, $sentence){
+        //Using the 'preg_match' function to search for the subject ($word) for a match to the regular expression given ($sentence), the 'i' modifier to perform case-insensitive matching and finally the 'b' anchor to target the '$word' variable only
         
-
+        if(preg_match("/\b{$word}\b/i", $sentence)){
+            return true;
+        }
+        else{
+            return false;
+        }
 
     }
